@@ -1,0 +1,46 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #444444;
+}
+
+a {
+    display: block;
+    position: absolute;
+}
+
+a:hover {
+    background-color: rgba(0,0,0,.04);
+}
+
+.wrapper {
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.start-button {
+    top: 548px;
+    left: 416px;
+    width: 247px;
+    height: 48px;
+}
+
+.mid-button {
+    top: 428px;
+    left: 472px;
+    width: 235px;
+    height: 48px;
+}
+
+.end-button {
+    top: 456px;
+    left: 472px;
+    width: 253px;
+    height: 48px;
+}
