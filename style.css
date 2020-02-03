@@ -10,8 +10,9 @@ body {
 a {
     display: block;
     position: absolute;
+    z-index: 200;
+    /*border: red solid 1px;*/
 }
-
 a:hover {
     background-color: rgba(0,0,0,.04);
 }
@@ -24,23 +25,109 @@ a:hover {
     margin: 0 auto;
 }
 
-.start-button {
-    top: 548px;
-    left: 416px;
-    width: 247px;
-    height: 48px;
+
+.main-menu {
+  position: absolute;
+  top: 70px;
+  left: 102px;
+  width: 240px;
+  height: 730px;
+  padding: 24px 0;
 }
 
-.mid-button {
-    top: 428px;
-    left: 472px;
-    width: 235px;
-    height: 48px;
+.spacer-1n {height: 8px; width: inherit;}
+.spacer-2n {height: 16px; width: inherit;}
+.spacer-36px {height: 36px; width: inherit;}
+
+.main-menu-item {
+  position: relative;
+  display: block;
+  width: 240px;
+  height: 36px;
 }
 
-.end-button {
-    top: 456px;
-    left: 472px;
-    width: 253px;
-    height: 48px;
+.main-menu-item:hover {
+  background-color: rgba(0,0,0,.04);
+}
+
+.item-link {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 240px;
+    height: 36px;
+    z-index: 20;
+    display: block;
+}
+.item-link:hover {
+    background-color: transparent;
+}
+.burger-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 36px;
+    height: 36px;
+    z-index: 25;
+    display: none;
+    background: url("./img/burger-icon@2x.png") center center no-repeat;
+    background-size: 100%;
+}
+
+.burger-icon:hover {
+    background: url("./img/burger-icon-hover@2x.png") center center no-repeat;
+    background-size: 100%;
+}
+
+.active:hover {
+    background-color: transparent;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 258px;
+  left: 244px;
+  z-index: 100;
+  display: block;
+}
+
+.burger-menu a {
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 36px;
+}
+
+.burger-menu a:hover {
+    background-color: rgba(0,0,0,.04);
+}
+
+/* Cелектор для подменю, если навести курсор на родительский элемент верхнего меню */
+.main-menu > .main-menu-item:hover .burger-icon {
+  display: block;
+}
+
+.icon-hover {
+    width: 36px;
+    height: 36px;
+    z-index: 2700;
+}
+.sp-close-icon {
+    top: 34px;
+    right: 26px;
+    width: 36px;
+    height: 36px;
+    z-index: 1200;
+}
+.lb-close-icon {
+    top: 200px;
+    left: 836px;
+    width: 36px;
+    height: 36px;
+    z-index: 1800;
+}
+.sp-close-icon:hover, .lb-close-icon:hover, .icon-hover:hover {
+    background-color: transparent;
+    background: url("./img/hover-40px@2x.png") center center no-repeat;
+    background-size: 100%;
 }
